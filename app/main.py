@@ -28,7 +28,7 @@ def weather():
             weather= (data.get('weather'))
             print(weather)
             F = round(data['main']['temp'])
-            temp = round(((F-32)*5)/9)  
+            temp = round(F-273.15)
             humidity = data['main']['humidity']
             wind_speed =  data['wind']['speed']
             weather_img_id = data['weather'][0]['icon']

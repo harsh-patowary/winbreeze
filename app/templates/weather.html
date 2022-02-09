@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+    {% block content %}
+    <h1>{% block title %} Welcome to WinBreeze {% endblock %}</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="">
+  
+                    <div class="card-body">
+                        <form class="container" method="post">
+                            <div class="form-group">
+                                
+                                <div class="col-xs-2">
+                                    <label for="city">City Name</label>
+                                    <input type="text" name="city"
+                                    placeholder="Enter City Name" class="form-control input-sm"
+                                    value="{{ request.form['city'] }}"></input>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="">
+  
+                    <div class="card-body">
+                        <div class="container text-center">
+                            <h3>Current Weather For {{ city }}</h3>
+                            <h5>Temperature: {{ temp }}&#8451</h5>
+                            <h5>Humidity: {{ humidity }}%</h5>
+                            <h5>Wind Speed: {{ wind_speed }} mph</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container image-box h-100">
+            
+            <div class="container-tablet center card border-0 p-3 shadow-sm text-center">
+                <img id="image" src={{ img_url }} alt="" class="center" />
+                <label for="description">{{ desc }}</label>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

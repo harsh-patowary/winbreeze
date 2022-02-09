@@ -1,0 +1,30 @@
+h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+.center {
+    display: block;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.search-box{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 20px;
+}
+.result-box{
+    position: absolute;
+    top: 100px;
+    padding: 20px;
+}
+.img-box{
+    position: absolute;
+    top: 200px;
+    padding: 20px;
+}
